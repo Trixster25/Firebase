@@ -2,41 +2,38 @@ body {
     font-family: Arial, sans-serif;
     background-color: mediumseagreen;
     color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-}
-
-.container {
-    text-align: center;
-    background-color: white;
-    color: black;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
     padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input {
-    margin-bottom: 10px;
+  }
+  
+  button {
+    font-size: 20px;
     padding: 10px;
-    font-size: 16px;
-}
-
-button {
-    padding: 10px;
-    font-size: 16px;
-    background-color: mediumseagreen;
-    color: white;
-    border: none;
+    margin: 10px;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: seagreen;
-}
+  }
+  
+  input {
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+  }
+  
+  #auth-error {
+    color: red;
+    margin-top: 10px;
+  }
+  
