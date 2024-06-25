@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Evaluation Program</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Login</h2>
-    <form id="login-form">
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-    </form>
-    <script src="https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.8.3/firebase-firestore.js"></script>
+    <div class="container">
+        <h1>Please rate your Experience</h1>
+        <div class="button-container">
+            <button id="satisfied-btn">
+                <img src="satisfied.png" alt="Satisfied" />
+                <span>Satisfied</span>
+            </button>
+            <button id="unsatisfied-btn">
+                <img src="unsatisfied.png" alt="Unsatisfied" />
+                <span>Unsatisfied</span>
+            </button>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
