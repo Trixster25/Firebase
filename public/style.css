@@ -2,50 +2,41 @@ body {
     font-family: Arial, sans-serif;
     background-color: mediumseagreen;
     color: white;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
 }
 
 .container {
-    padding: 50px;
-}
-
-button {
-    background-color: white;
-    color: mediumseagreen;
-    border: none;
-    padding: 20px;
-    margin: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    border-radius: 10px;
-    display: inline-block;
     text-align: center;
-}
-
-button img {
-    width: 100px;
-    height: 100px;
-    display: block;
-    margin: 0 auto 10px auto;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-form input {
+input {
+    margin-bottom: 10px;
     padding: 10px;
-    margin: 10px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
+    font-size: 16px;
 }
 
-form button {
-    padding: 10px 20px;
-    font-size: 18px;
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: mediumseagreen;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: seagreen;
 }

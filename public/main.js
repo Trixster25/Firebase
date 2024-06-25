@@ -1,7 +1,7 @@
 // Import Firebase functions
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { getFirestore, doc, getDoc, updateDoc, increment } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -19,27 +19,9 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// Update feedback count in Firestore
-const updateFeedbackCount = async (feedbackType) => {
-    const docRef = doc(db, 'feedback', 'stats');
-    await updateDoc(docRef, {
-        [feedbackType]: increment(1)
-    });
-};
-
-// Handle button clicks
-document.getElementById('satisfied-btn').addEventListener('click', () => {
-    updateFeedbackCount('satisfied');
-    alert('Thank you for your feedback!');
-});
-
-document.getElementById('unsatisfied-btn').addEventListener('click', () => {
-    updateFeedbackCount('unsatisfied');
-    alert('Thank you for your feedback!');
-});
-
-// Login form submission
-document.getElementById('login-form').addEventListener('submit', (e) => {
+// Login form
+const loginForm = document.getElementById('login-form');
+loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;

@@ -26,8 +26,8 @@ onAuthStateChanged(auth, (user) => {
         const statsRef = doc(db, 'feedback', 'stats');
         getDoc(statsRef).then((docSnap) => {
             if (docSnap.exists()) {
-                document.getElementById('satisfied-count').textContent = docSnap.data().satisfied;
-                document.getElementById('unsatisfied-count').textContent = docSnap.data().unsatisfied;
+                document.getElementById('satisfied-count').textContent = docSnap.data().satisfied || 0;
+                document.getElementById('unsatisfied-count').textContent = docSnap.data().unsatisfied || 0;
             }
         }).catch((error) => {
             console.error('Error fetching statistics:', error);
