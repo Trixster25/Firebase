@@ -34,9 +34,9 @@ def handle_unsatisfied():
     messagebox.showinfo("Feedback", "Thank you for your feedback!")
     root.after(1000, go_back)
 
-def go_back():
-    root.destroy()
-    os.system(r'python "C:/Users/loren/Music/Codes/New Back-up/Others/Landing page GUI.py"')
+# def go_back():
+#     root.destroy()
+#     os.system(r'python "C:/Users/loren/Music/Codes/New Back-up/Others/Landing page GUI.py"')
 
 # Create the main window
 root = tk.Tk()
